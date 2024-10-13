@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dear Comrade</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico.png" type="image/x-icon">
+    <!-- For .ico format -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <!-- For .png format, optional -->
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <!-- For Apple devices, optional -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Your CSS file -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dear Comrade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f0f0;
+        }
+        
+        video {
+            width: 80%;
+            max-width: 600px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>welcome</h1>
+
+    <!-- Video element -->
+    <video id="introVideo" controls>
+        <source src="intro video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script>
+        // JavaScript to navigate to the next page after the video ends
+        var video = document.getElementById('introVideo');
+
+        video.addEventListener('ended', function() {
+            // Navigate to about-me.html when the video ends
+            window.location.href = 'about-me.html';
+        });
+    </script>
+
+</body>
+
+</html>

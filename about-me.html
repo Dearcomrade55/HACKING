@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dear Comrade</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico.png" type="image/x-icon">
+    <!-- For .ico format -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <!-- For .png format, optional -->
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <!-- For Apple devices, optional -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Your CSS file -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: black;
+            /* Set background to black */
+            padding: 50px;
+            color: green;
+            /* Set all text color to green */
+        }
+        
+        h1 {
+            color: green;
+            /* Green text for heading */
+        }
+        
+        .typed-text {
+            font-size: 1.5rem;
+            color: green;
+            /* Green color for typing effect */
+            display: inline;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid green;
+            /* Green blinking caret */
+            animation: blink-caret 0.75s step-end infinite;
+        }
+        /* Blinking caret */
+        
+        @keyframes blink-caret {
+            from,
+            to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>About me</h1>
+    <p class="typed-text" id="typewriter"></p>
+
+    <script>
+        // The text to be typed out
+        const aboutText = "Hello! I am Sharon Anil, i am Bca student and a Ethical hacker welocome to my world .";
+        const typingSpeed = 50; // Typing speed in milliseconds
+        let charIndex = 0;
+
+        function typeText() {
+            // Get the element where the text will be typed
+            const typewriterElement = document.getElementById("typewriter");
+            if (charIndex < aboutText.length) {
+                typewriterElement.innerHTML += aboutText.charAt(charIndex);
+                charIndex++;
+                setTimeout(typeText, typingSpeed); // Call the function recursively
+            } else {
+                // Once the text is fully typed, redirect after a brief delay (2seconds)
+                setTimeout(function() {
+                    window.location.href = 'contact-info.html';
+                }, 2000); // Wait 2 seconds before navigating
+            }
+        }
+
+        // Start typing effect when the page loads
+        window.onload = typeText;
+    </script>
+
+</body>
+
+</html>

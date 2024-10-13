@@ -1,0 +1,41 @@
+    /* Content sections */
+
+.content {
+    margin: 20px;
+    color: green;
+    /* This makes the text color for paragraphs green */
+}
+
+
+/* Add a specific class for green headings */
+
+.green-text {
+    color: green !important;
+    /* Ensure heading text is green */
+}
+
+
+/* Instagram Contact Section Styling */
+
+.instagram-contact-section {
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    /* Light background to stand out */
+    border-radius: 8px;
+}
+
+.instagram-contact-section h2 {
+    color: green;
+    /* Heading in contact section can also be styled in green */
+    margin-bottom: 10px;
+}
+
+.instagram-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #E1306C;
+    /* Inst…

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dear Comrade</title>
+
+        <!-- Favicon -->
+        <link rel="icon" href="favicon.ico.png" type="image/x-icon">
+        <!-- For .ico format -->
+        <link rel="icon" href="images/favicon.png" type="image/png">
+        <!-- For .png format, optional -->
+        <link rel="apple-touch-icon" href="images/favicon.png">
+        <!-- For Apple devices, optional -->
+
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Your CSS file -->
+    </head>
+
+    <body>
+        <header>
+            <h1>Your Website Header</h1>
+        </header>
+
+        <div class="content">
+            <!-- Your content goes here -->
+        </div>
+    </body>
+
+    </html>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #000;
+        }
+        
+        .logo-circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-image: url('logo.jpg');
+            background-size: cover;
+            margin-bottom: 20px;
+        }
+        
+        .welcome-text {
+            color: green;
+            font-size: 24px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo-circle"></div>
+    <div class="welcome-text" id="welcomeText"></div>
+
+    <script>
+        let i = 0;
+        const text = "Welcome to my world";
+
+        function typeText() {
+            if (i < text.length) {
+                document.getElementById("welcomeText").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeText, 100);
+            } else {
+                // After typing, redirect to the next page
+                setTimeout(() => window.location.href = "introduction.html", 1000);
+            }
+        }
+        window.onload = typeText;
+    </script>
+</body>
+
+</html>
